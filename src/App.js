@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import {React,useState} from 'react'
+import {Route,Routes} from 'react-router-dom';
+import Home from './Home';
+import MainScreen from './MainScreen';
+import InputForms from './InputForm';
 
 function App() {
+
+  const [todos,setTodo] = useState(['First Todo','Second Todo','Third Todo']);
+  const [todoBody,setBody] = useState(['First Todo Body','Second Todo Body','Third Todo Body']);
+
+    function newTodo(event,title,body){
+        event.preventDefault();
+        const oldTodo = [...todos];
+        let todoTitle = title;
+        const oldBody = [...todoBody];
+        let newtodoBody = body;
+        setBody([...oldBody, newtodoBody])
+        setTodo([...oldTodo,todoTitle]);
+    }
+
+    function remove(index){
+        const oldtodo = [...todos]
+        oldtodo.splice(index, 1)
+        const oldTodoBody = [...todoBody]
+        oldTodoBody.splice(index,1)
+        setBody(oldTodoBody)
+        setTodo(oldtodo)
+    }
+
+    function edit(index){
+      let newText = prompt('Please Update Task Title...')
+      const oldTodo = [...todos]
+      oldTodo[index] = newText
+      setTodo(oldTodo)
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path ='/' element = {<Home />} />
+        <Route path ='/mainscreen' element = {<MainScreen todos = {todos} body = {todoBody} remove = {remove} edit = {edit}/>} />
+        <Route path = '/mainscreen/form' element = {<InputForms add = {newTodo} />} />
+      </Routes>
     </div>
   );
 }

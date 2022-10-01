@@ -1,0 +1,25 @@
+@media (max-width:400px){
+    *{
+        margin:0;
+        padding:0;
+    }
+    #main-screen{
+
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #main-header{
+
+        font-size:50px;
+    }
+    #form-title{
+        font-size: 25px;
+        text-decoration: none;
+        color:black;
+        border:2px black solid;
+        margin:10px;
+        padding:10px;
+        border-radius: 10px;
+    }
+}
