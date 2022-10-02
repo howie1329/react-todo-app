@@ -19,12 +19,20 @@
         border-bottom: 2px black solid;
     }
 
+    .input-field{
+        background-color:#BFBFBF;
+    }
+
     #form{
         text-align:center;
         font-size:22px;
         display:flex;
         flex-direction:column;
         gap:5px;
+    }
+
+    #links{
+        text-decoration: none;
     }
 
     #back-button{

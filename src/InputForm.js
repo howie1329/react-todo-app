@@ -1,6 +1,12 @@
 import {React,useState} from "react";
 import { Link } from "react-router-dom";
 import './InputForm.css'
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+
 
 function InputForm({add}){
 
@@ -10,14 +16,17 @@ function InputForm({add}){
     return(
         <div id = 'form-container'>
             <h2 id = 'form-header'>Please Create A New ToDO</h2>
-            <form id = 'form'>
-                <label id = 'label'>What Is Your New Todo</label>
-                <input  id = 'input' type = 'text' onChange = {(e) => setTitle(e.target.value)}></input>
-                <label id = 'label'>Give Your Todo A Description</label>
-                <input id = 'input' type = 'text' onChange = {(e) => setBody(e.target.value)}></input>
-                <button type = 'submit' value = 'Submit' onClick = {(e) => add(e,title,body)}>Submit</button>
-                <Link to = '/mainscreen'><button id = 'back-button' >Main Screen</button></Link>
-            </form>
+            <Box>
+                <form id = 'form'>
+                    <TextField className = 'input-field' required id="outlined-required" label="ToDo Title"  onChange = {(e) => setTitle(e.target.value)}/>
+                    <TextField className = 'input-field' required id="outlined-required" label="ToDo Description" onChange = {(e) => setBody(e.target.value)}/>
+                    <Stack spacing={2} direction = 'column'>
+                        <Button fullWidth = {true} variant = 'contained' type = 'submit' value = 'Submit' onClick = {(e) => add(e,title,body)}>Submit</Button>
+                        <Link id = 'links' to = '/mainscreen'><Button fullWidth = {true} variant = 'contained'> Main Screen</Button></Link>
+                    </Stack>
+                    
+                </form>
+            </Box>
             
         </div>
     )
