@@ -7,8 +7,8 @@ import InputForms from './InputForm';
 
 function App() {
 
-  const [todos,setTodo] = useState(['First Todo','Second Todo','Third Todo']);
-  const [todoBody,setBody] = useState(['First Todo Body','Second Todo Body','Third Todo Body']);
+  const [todos,setTodo] = useState(['Homework','Clean BedRoom','Walk Dog']);
+  const [todoBody,setBody] = useState(['Math Work','Bed,Floor,and Desk','At 3:00PM']);
 
     function newTodo(event,title,body){
         event.preventDefault();

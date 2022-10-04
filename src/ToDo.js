@@ -1,4 +1,5 @@
 import React from "react";
+import {PencilIcon,TrashIcon} from '@heroicons/react/20/solid'
 
 
 function Todo({title,body,remove,index,edit}){
@@ -7,8 +8,8 @@ function Todo({title,body,remove,index,edit}){
             <h3 className=" font-semibold text-2xl underline text-center" id = 'todo-header'>{title}</h3>
             <p className=" font-medium italic text-lg text-center" id = 'todo-body'>{body}</p>
             <div className="flex justify-evenly">
-                <button className = 'font-semibold w-1/3  border-2 bg-indigo-300 border-indigo-300 border-solid rounded' id = 'button' onClick = {() => edit(index)}><img src = './assets/edit.svg'> Edit </button>
-                <button className = 'font-semibold w-1/3  border-2 bg-indigo-300 border-indigo-300 border-solid rounded' id = 'button' onClick = {() => remove(index)}>Delete</button>
+                <button className = 'flex justify-center items-center font-semibold w-1/3  border-2 bg-indigo-300 border-indigo-300 border-solid rounded' id = 'button' onClick = {() => edit(index)}><PencilIcon className = 'w-6 h-6'/> Edit</button>
+                <button className = 'flex justify-center items-center font-semibold w-1/3  border-2 bg-indigo-300 border-indigo-300 border-solid rounded' id = 'button' onClick = {() => remove(index)}><TrashIcon className = 'w-6 h-6'/> Delete</button>
             </div>
             
         </div>

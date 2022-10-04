@@ -1,5 +1,6 @@
 import {React,useState} from "react";
 import { Link } from "react-router-dom";
+import {PlusIcon,BackwardIcon} from '@heroicons/react/20/solid'
 
 function InputForm({add}){
 
@@ -14,8 +15,8 @@ function InputForm({add}){
                 <input className=" text-black border-2 border-black border-solid min-w-[70%] rounded-lg" type = 'text' onChange = {(e) => setTitle(e.target.value)}></input>
                 <label className = 'font-medium'>Give Your Todo A Description:</label>
                 <input className=" text-black border-2 border-black border-solid min-w-[70%] rounded-lg" type = 'text' onChange = {(e) => setBody(e.target.value)}></input>
-                <button className = ' font-semibold w-1/3  border-2 bg-indigo-500 border-indigo-500 border-solid rounded text-center my-2' type = 'submit' value = 'Submit' onClick = {(e) => add(e,title,body)}>Submit</button>
-                <Link className = ' font-semibold w-1/3  border-2 bg-indigo-500 border-indigo-500 border-solid rounded text-center' to = '/mainscreen'><button  id = 'back-button' >Back</button></Link>
+                <button className = ' flex justify-center items-center font-semibold w-1/3  border-2 bg-indigo-500 border-indigo-500 border-solid rounded text-center my-2' type = 'submit' value = 'Submit' onClick = {(e) => add(e,title,body)}><PlusIcon className = 'w-7 h-7'/>Submit</button>
+                <Link className = ' flex justify-center font-semibold w-1/3  border-2 bg-indigo-500 border-indigo-500 border-solid rounded text-center' to = '/mainscreen'><button className = 'flex justify-center items-center'><BackwardIcon className = 'w-7 h-7 mr-1'/>Back</button></Link>
             </form>
             
         </div>
