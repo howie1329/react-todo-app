@@ -15,21 +15,11 @@
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
+Simple CRUD Todo App
 ### Screenshot
 
 ![](./screenshots/phoneMainscreen.PNG)![](./screenshots/phoneNewTodo.PNG)
 ![](./screenshots/DesktopCapture.PNG)![](./screenshots/DesktopMainScreen.PNG)
-
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -41,12 +31,10 @@ I wanted to focus on a mobile first approch while using React, Tailwind, and Fir
 ### Built with
 
 - Semantic HTML5 markup
-- [Tailwind]() - CSS Framework
-- [Firebase]()
-- Flexbox
-- Mobile-first workflow
+- [Tailwind](https://tailwindcss.com/) - CSS Framework
+- [Firebase](https://firebase.google.com/) - Backend Database
 - [React](https://reactjs.org/) - JS library
-
+- Mobile-first workflow
 ### What I learned
 
 I was able to create a CRUD operation that takes in data from a database, parses through the data for the title and body of the todo, and returns the id for each todo
@@ -76,7 +64,6 @@ Next I would like to add a completed status and a time and data display for each
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- GitHub Profile - [Howard Thomas](https://github.com/howie1329)
+
 
