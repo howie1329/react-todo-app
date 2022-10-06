@@ -11,9 +11,6 @@
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 Simple CRUD Todo App
 ### Screenshot
@@ -22,8 +19,7 @@ Simple CRUD Todo App
 ![](./screenshots/DesktopCapture.PNG)![](./screenshots/DesktopMainScreen.PNG)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Todo-APP](https://howie1329.github.io/react-todo-app/)
 
 ## My process
 I wanted to focus on a mobile first approch while using React, Tailwind, and Firebase. First was understanding how i wanted the app to look and feel. Next was create components and using tailwind to style. Finally, I used Firebase for the backend for CRUD operations
