@@ -1,11 +1,8 @@
-# Frontend Mentor - Space tourism website solution
-
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# CRUD Todo App
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -14,19 +11,10 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for each of the website's pages depending on their device's screen size
-- See hover states for all interactive elements on the page
-- View each page and be able to toggle between the tabs to see new information
 
 ### Screenshot
 
@@ -46,56 +34,43 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+I wanted to focus on a mobile first approch while using React, Tailwind, and Firebase. First was understanding how i wanted the app to look and feel. Next was create components and using tailwind to style. Finally, I used Firebase for the backend for CRUD operations
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- [Tailwind]() - CSS Framework
+- [Firebase]()
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+I was able to create a CRUD operation that takes in data from a database, parses through the data for the title and body of the todo, and returns the id for each todo
+```JS
+  //Read Todos From Database
+  async function readTodo(){
+    const querySnapshot = await getDocs(collection(db,'todos'));
+    let todoData = []
+    let dataId = []
+    querySnapshot.forEach((doc) => {
+      todoData.push(doc.data())
+      dataId.push(doc.id)
+    })
+    setTodo([...todoData])
+    setID([...dataId])
+  }
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Next I would like to add a completed status and a time and data display for each todo
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Firebase Docs](https://firebase.google.com/docs?authuser=0&hl=en) - This helped me understand how to connect to the Firebase and preform CURD functionaliy
+- [Tailwind Docs](https://tailwindcss.com/docs/installation) - Helped me get used to using tailwind. Docs were simple and straight forward
 
 ## Author
 
@@ -103,10 +78,3 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
