@@ -1,6 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
+  "homepage": "https://howie1329.github.io/react-todo-app",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.11",
@@ -8,15 +9,14 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.10.0",
-    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://howie1329.github.io/react-todo-app/",
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "tailwindcss": "^3.1.8"
   }
 }
