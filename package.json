@@ -1,11 +1,12 @@
 {
+  "proxy": "http://localhost:4002",
   "name": "todo-app",
   "version": "0.1.0",
   "homepage": "https://howie1329.github.io/react-todo-app",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.11",
-    "firebase": "^9.10.0",
+    "init": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
