@@ -5,9 +5,6 @@
   "homepage": "https://howie1329.github.io/react-todo-app",
   "private": true,
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^6.7.3",
     "@heroicons/react": "^2.0.11",
     "init": "^0.1.2",
     "react": "^18.2.0",
